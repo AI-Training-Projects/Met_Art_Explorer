@@ -40,6 +40,8 @@ class Explorer:
 
         for department in self.departments["departments"]:
             # a button is created for each department in the list of departments
+            print(f"department ['displayName'] is {department['displayName']}")
+            print(f"department ['departmentId'] is {department['departmentId']}")
             st.button(
                 department["displayName"], 
                 on_click=self.go_to_room, 
@@ -71,7 +73,7 @@ class Explorer:
         st.text(self.department_name)
         self.image = self.object["primaryImageSmall"]
         st.button(
-            "Jump",
+            "Show Me Some Art!",
             on_click=self.show_room
         )
         self.show_image()
