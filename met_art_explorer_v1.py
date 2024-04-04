@@ -36,10 +36,12 @@ class Explorer:
         Displays buttons for each department in the MET collection.
         Users can click on a department to view art pieces from that department.
         """
-        print(f"The list of departments from self.departments['departments'] is {self.departments["departments"]}")
+        print(f"\nThe list of departments from self.departments['departments'] is {self.departments["departments"]}\n")
 
         for department in self.departments["departments"]:
             # a button is created for each department in the list of departments
+            print(f"department['displayName'] is {department['displayName']}")
+            print(f"department['departmentId'] is {department['departmentId']}")
             st.button(
                 department["displayName"], 
                 on_click=self.go_to_room, 
@@ -60,7 +62,7 @@ class Explorer:
         self.department_name = name
         self.objects = requests.get(F'{OBJECTS}?departmentIds={department_id}').json()["objectIDs"]
         self.show_room()
-        print(f"List of objects accessed by go_to_room(): {self.show_room()} ")
+        #print(f"List of objects accessed by go_to_room(): {self.show_room()} ")
     
     def show_room(self):
         """
@@ -71,7 +73,7 @@ class Explorer:
         st.text(self.department_name)
         self.image = self.object["primaryImageSmall"]
         st.button(
-            "Jump",
+            "Fetch Art Piece (Randomly)",
             on_click=self.show_room
         )
         self.show_image()
