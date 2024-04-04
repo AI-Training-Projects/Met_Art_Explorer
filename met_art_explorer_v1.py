@@ -37,7 +37,8 @@ class Explorer:
         Users can click on a department to view art pieces from that department.
         """
         print(f"The list of departments from self.departments['departments'] is {self.departments["departments"]}")
-
+        print()
+        print()
         for department in self.departments["departments"]:
             # a button is created for each department in the list of departments
             print(f"department ['displayName'] is {department['displayName']}")
@@ -62,7 +63,7 @@ class Explorer:
         self.department_name = name
         self.objects = requests.get(F'{OBJECTS}?departmentIds={department_id}').json()["objectIDs"]
         self.show_room()
-        print(f"List of objects accessed by go_to_room(): {self.show_room()} ")
+        #print(f"List of objects accessed by go_to_room(): {self.show_room()} ")
     
     def show_room(self):
         """
