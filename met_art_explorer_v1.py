@@ -70,7 +70,7 @@ class Explorer:
         st.text(self.department_name)
         self.image = self.object["primaryImageSmall"]
         st.button(
-            "Show Me Some Art!",
+            "Jump",
             on_click=self.show_room
         )
         self.show_image()
