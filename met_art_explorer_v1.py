@@ -33,23 +33,19 @@ class Explorer:
     
     def show_rooms(self):
         """
-        Displays buttons for each department in the MET collection.
-        Users can click on a department to view art pieces from that department.
+        Displays a dropdown menu for each department in the MET collection.
+        Users can select a department to view art pieces from that department.
         """
-        print(f"The list of departments from self.departments['departments'] is {self.departments["departments"]}")
-        print()
-        print()
-        for department in self.departments["departments"]:
-            # a button is created for each department in the list of departments
-            print(f"department ['displayName'] is {department['displayName']}")
-            print(f"department ['departmentId'] is {department['departmentId']}")
-            st.button(
-                department["displayName"], 
-                on_click=self.go_to_room, 
-                kwargs={
-                    "name": department["displayName"],
-                    "department_id": department["departmentId"]
-                    })
+        department_names = [department["displayName"] for department in self.departments["departments"]]
+        department_ids = [department["departmentId"] for department in self.departments["departments"]]
+
+        selected_department_name = st.selectbox('Select a department', department_names)
+
+        # get the department_id of the selected department
+        selected_department_id = department_ids[department_names.index(selected_department_name)]
+
+        if st.button('Go to room'):
+            self.go_to_room(selected_department_id, selected_department_name)
     
     def go_to_room(self, department_id, name):
         """
