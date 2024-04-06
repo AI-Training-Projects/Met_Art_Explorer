@@ -49,6 +49,22 @@ class Explorer:
         self.object = None
         self.image = ""
 
+    # def show_rooms(self):
+    #     """
+    #     Displays buttons for each department in the MET collection in the Streamlit Sidebar.
+    #     Users can click on a department to view art pieces from that department.
+    #     """
+    #     st.sidebar.title("Departments")
+    #     for department in self.departments["departments"]:
+    #         st.sidebar.button(
+    #             f"{department['displayName']} ({department['totalObjects']})",
+    #             on_click=self.go_to_room,
+    #             kwargs={
+    #                 "name": department["displayName"],
+    #                 "department_id": department["departmentId"]
+    #             }
+    #         )
+
     def show_rooms(self):
         """
         Displays buttons for each department in the MET collection in the Streamlit Sidebar.
@@ -56,8 +72,10 @@ class Explorer:
         """
         st.sidebar.title("Departments")
         for department in self.departments["departments"]:
+            # Use 'N/A' as a default value if 'totalObjects' does not exist
+            total_objects = department.get('totalObjects', 'N/A')
             st.sidebar.button(
-                f"{department['displayName']} ({department['totalObjects']})",
+                f"{department['displayName']} ({total_objects})",
                 on_click=self.go_to_room,
                 kwargs={
                     "name": department["displayName"],
