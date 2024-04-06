@@ -1,0 +1,39 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# old code to delete
+zzz_code_to_delete/
+
+# Environments
+.env
+.venv
+env/
+venv/
+condaenv/
+
+# pickle files with sensitive data
+token.pickle
+*.pickle
+
+# Email messages
+*email_content.txt
+
+# Exclude all email message related files
+# *.msg
+
+# Log files
+*.log
+
+# Data files
+*.data
+
+# Secrets
+*.secrets
+
+# Conda Files WILL be included to provide instructions for other people
+# to build their own working development environment.
+# environment.yml
