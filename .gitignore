@@ -27,6 +27,7 @@ token.pickle
 
 # Log files
 *.log
+app_log.log
 
 # Data files
 *.data
