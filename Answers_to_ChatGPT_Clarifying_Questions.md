@@ -1,3 +1,7 @@
+ChatGPT was used to revise the application, as a demonstration of the power of ChatGPT versus Copilot.
+Created On: 2024.04.04
+Updated On:
+
 Answer to ChatGPT Clarifying Questions:
 
 I will answer each of your clarifying questions with my answers identified in order.  See below for your training examples. 

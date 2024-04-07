@@ -110,7 +110,11 @@ class Explorer:
         st.text(f"Description: {self.object.get('objectName', 'N/A')}")
         st.text(f"Department: {self.object.get('department', 'N/A')} ({self.department_name})")
         st.text(f"Piece {self.objects.index(self.object['objectID']) + 1} of {len(self.objects)}")
-        st.image(self.object["primaryImageSmall"])
+        # Check if primaryImageSmall is not empty and is a valid URL or file path
+        if self.object["primaryImageSmall"]:
+            st.image(self.object["primaryImageSmall"])
+        else:
+            st.warning("Image not available.")
         st.markdown(f"[More Info]({self.object['objectURL']})")
         logging.info(f"Displayed art piece: {self.object['title']}")
 
