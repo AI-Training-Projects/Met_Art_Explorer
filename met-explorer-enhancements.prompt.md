@@ -10,12 +10,12 @@ Update History:
 
     TODO: met_art_ChatGPT_v1.py needs to be renamed to eliminate ChatGPT in the name.  Reintroduce "chat" or some "smart" name in a later version when one or more AI agents are incorporated.
 
-# NTAI TRAINEES: feel free to pick any "TBD Enhancement" below to implement.  
-## Create a feature branch with the name of your feature, work on that feature. Commit all your changes to your local git repository.
-## When your new feature is ready to be merged, create and send a Pull Request to the repo admin for https://github.com/AI-Training-Projects/Met_Art_Explorer .  
-## Your change, addition or enhancement will be review and merged appropriately.
+### NTAI TRAINEES: feel free to pick any "TBD Enhancement" below to implement.  
+#### Create a feature branch with the name of your feature, work on that feature. Commit all your changes to your local git repository.
+#### When your new feature is ready to be merged, create and send a Pull Request to the repo admin for https://github.com/AI-Training-Projects/Met_Art_Explorer .  
+#### Your change, addition or enhancement will be review and merged appropriately.
 
-# HIGHEST PRIORITY:  Usability
+## HIGHEST PRIORITY:  Usability
 
 Enhance the functionality of the "Met Art" Streamlit application @met_art.py to give it a better user experience and more functionality.
 
